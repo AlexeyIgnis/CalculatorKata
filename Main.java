@@ -14,6 +14,11 @@ public class Main {
 
         String opera;
         String[] massiv = input.split(" ");
+        int length = massiv.length;
+        if (length != 3) {
+            throw new MyException("формат математической операции не удовлетворяет заданию - два операнда и один оператор");
+        }
+
         String a = massiv[0];
         try {
             opera = massiv[1];
